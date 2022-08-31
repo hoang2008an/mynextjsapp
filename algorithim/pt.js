@@ -69,8 +69,8 @@ const solve_pt4 =(_a,_b,_c,_d,_e)=>{
     const B=Math.sqrt(Roundto5(y*y/4-d));
     var nghiem1=solve_pt2(1,a/2-A,y/2-B);
     var nghiem2=solve_pt2(1,a/2+A,y/2+B);
-    result=nghiem1.concat(nghiem2)
-    return result;
+
+    return [nghiem1,nghiem2];
 }
 answer=solve_pt4(1,1,1,1,-4);
 console.log(answer);
