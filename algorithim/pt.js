@@ -47,8 +47,10 @@ const solve_pt3 =(a,b,c,d)=>{
             }
         }
         if(delta<0){
-            const test =(Math.cbrt(k+Math.sqrt(k*k+1))+Math.cbrt(k-Math.sqrt(k*k+1)))
-            const x=(sq_delta)/(3*a)*(Math.cbrt(Math.abs(k)+Math.sqrt(k*k+1))+Math.cbrt(Math.abs(k)-Math.sqrt(k*k+1)))-b/(3*a);
+            //const test =(Math.cbrt(k+Math.sqrt(k*k+1))+Math.cbrt(k-Math.sqrt(k*k+1)))
+            const x=(sq_delta)/(3*a)*(Math.cbrt(k+Math.sqrt(k*k+1))+Math.cbrt(k-Math.sqrt(k*k+1)))-b/(3*a);
+            //const test1=(sq_delta)/(3*a)*(Math.cbrt(k+Math.sqrt(k*k+1))+Math.cbrt(k-Math.sqrt(k*k+1)));
+            //test1=test1;
             return [x];
         }
     }
@@ -63,14 +65,15 @@ const solve_pt4 =(_a,_b,_c,_d,_e)=>{
     let i1=16-a*a/4+b
     let i2=4*d-8*c
     let i3=c*c-4*b*d+a*a*d
-    const y=Roundto5(solve_pt3(1,-b,(a*c-4*d),(c*c-4*b*d+a*a*d))[0]);
+    const y=Roundto5(solve_pt3(1,-b,(a*c+4*d),(c*c-4*b*d+a*a*d))[0]);
     //console.log(y);               16,75          -24          13
-    const A=Math.sqrt(Roundto5(a*a/4-b+y));
-    const B=Math.sqrt(Roundto5(y*y/4-d));
+    const A=Math.sqrt(Roundto10(a*a/4-b+y));
+    const B=Math.sqrt(Roundto10(y*y/4-d));
     var nghiem1=solve_pt2(1,a/2-A,y/2-B);
     var nghiem2=solve_pt2(1,a/2+A,y/2+B);
 
     return [nghiem1,nghiem2];
 }
-answer=solve_pt4(1,1,1,1,-4);
+//let answer=solve_pt3(1,2,3,4);
+let answer=solve_pt4(1,1,1,1,-4);
 console.log(answer);
