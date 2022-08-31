@@ -1,4 +1,4 @@
-import { Roundto5,Roundto10 } from "./rounding";
+import { Roundto5,Roundto10 } from "./rounding.js";
 const solve_pt1 =(a,b)=>{
     if(a===0){
         if(b!=0){
