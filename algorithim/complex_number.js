@@ -19,6 +19,7 @@ class complex_number{
         return this.real + " + " + this.imaginary + "i";
     }
     sqrt(level){
+        
         let abs=Math.sqrt(this.real*this.real+this.imaginary*this.imaginary);
         let angle=Math.atan(this.imaginary/this.real);
         let sqrt_abs=Math.pow(abs,1/level);
@@ -27,6 +28,7 @@ class complex_number{
             let real=sqrt_abs*Math.cos(sqrt_angle);
             let imaginary=sqrt_abs*Math.sin(sqrt_angle);
             sqrt_angle+=2*Math.PI/level;
+
         }
         let sqrt_real=sqrt_abs*Math.cos(sqrt_angle);
         let sqrt_imaginary=sqrt_abs*Math.sin(sqrt_angle);

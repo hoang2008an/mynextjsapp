@@ -1,4 +1,4 @@
-import { Roundto5,Roundto10 } from "./rounding.js";
+//import { Roundto5,Roundto10 } from "./rounding.js";
 const solve_pt1 =(a,b)=>{
     if(a===0){
         if(b!=0){
@@ -65,10 +65,16 @@ const solve_pt4 =(_a,_b,_c,_d,_e)=>{
     let i1=16-a*a/4+b
     let i2=4*d-8*c
     let i3=c*c-4*b*d+a*a*d
-    const y=Roundto5(solve_pt3(1,-b,(a*c+4*d),(c*c-4*b*d+a*a*d))[0]);
+    const y=Roundto10(solve_pt3(1,-b,(a*c-4*d),-(c*c-4*b*d+a*a*d))[0]);
     //console.log(y);               16,75          -24          13
+
+
+  
     const A=Math.sqrt(Roundto10(a*a/4-b+y));
-    const B=Math.sqrt(Roundto10(y*y/4-d));
+    let B=Math.sqrt(Roundto10(y*y/4-d));
+    if(a*y/2-c<0){
+        B=B*-1;
+    }
     var nghiem1=solve_pt2(1,a/2-A,y/2-B);
     var nghiem2=solve_pt2(1,a/2+A,y/2+B);
 
