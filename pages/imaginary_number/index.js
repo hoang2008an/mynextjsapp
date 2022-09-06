@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import link from 'next/link'
 
 export default function Home() {
@@ -29,8 +29,8 @@ export default function Home() {
             <p>Giải các phương trình từ bậc 1 đến bậc 4 nhanh chóng và chính xác</p>
           </a>
 
-          <a href="/imaginary_number" className={styles.card}>
-            <h2>Tính toán số ảo &rarr;</h2>
+          <a href="https://nextjs.org/learn" className={styles.card}>
+            <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
