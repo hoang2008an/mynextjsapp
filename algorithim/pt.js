@@ -1,5 +1,11 @@
-//import { Roundto5,Roundto10 } from "./rounding.js";
-const {Roundto5,Roundto10}=require("./rounding.js");
+//import { Roundto5,Round_to10 } from "./rounding.js";
+//import {Roundto5,Round_to10} from "./rounding";
+const Roundto5 =(x)=>{
+    return Math.round(x*100000)/100000;
+}
+const Round_to10=(x)=>{
+    return Math.round(x*10000000000)/10000000000;
+}
 
 
 const solve_pt1 =(a,b)=>{
@@ -67,22 +73,23 @@ const solve_pt4 =(_a,_b,_c,_d,_e)=>{
     const c=_d/_a;
     const d=_e/_a;
 
-    const y=Roundto10(solve_pt3(1,-b,(a*c-4*d),-(c*c-4*b*d+a*a*d))[0]);
+    const y=Round_to10(solve_pt3(1,-b,(a*c-4*d),-(c*c-4*b*d+a*a*d))[0]);
     //console.log(y);               16,75          -24          13
 
 
   
-    const A=Math.sqrt(Roundto10(a*a/4-b+y));
-    let B=Math.sqrt(Roundto10(y*y/4-d));
+    const A=Math.sqrt(Round_to10(a*a/4-b+y));
+    let B=Math.sqrt(Round_to10(y*y/4-d));
     if(a*y/2-c<0){
         B=B*-1;
     }
-    var nghiem1=solve_pt2(1,a/2-A,y/2-B);
-    var nghiem2=solve_pt2(1,a/2+A,y/2+B);
+    let nghiem1=solve_pt2(1,a/2-A,y/2-B);
+    let nghiem2=solve_pt2(1,a/2+A,y/2+B);
 
     return [nghiem1,nghiem2];
 }
 //let answer=solve_pt3(1,2,3,4);
+module.export={solve_pt1,solve_pt2,solve_pt3,solve_pt4};
 let answer=solve_pt4(1,1,1,1,-4);
 console.log(answer);
 console.log(answer);

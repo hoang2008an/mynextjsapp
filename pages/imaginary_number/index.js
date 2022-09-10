@@ -24,7 +24,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/giai_pt" className={styles.card}>
+          <a href="/index.jsx" className={styles.card}>
             <h2>Giải phương trình &rarr;</h2>
             <p>Giải các phương trình từ bậc 1 đến bậc 4 nhanh chóng và chính xác</p>
           </a>
