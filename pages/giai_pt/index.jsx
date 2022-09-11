@@ -4,7 +4,7 @@ import styles from '../../styles/Home.module.css'
 import Selector from '../component/Selector'
 import {useState} from "react";
 import Setter from '../component/Setter'
-import {solve_pt1,solve_pt2,solve_pt3,solve_pt4} from '../../../algorithim/pt'
+import {solve_pt1,solve_pt2,solve_pt3,solve_pt4} from '../../utils/algorithim/pt'
 export default function Home() {
     let num_param=2;
     const [option,set_option]=useState("PT bậc 2");

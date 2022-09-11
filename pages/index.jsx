@@ -2,9 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import link from 'next/link'
-
+//import dbConnect from "../utils/dbConnect";
+//import mongoose from "mongoose";
 export default function Home() {
+
+  //dbConnect().then(r => console.log("connected"));
   return (
+
     <div className={styles.container}>
       <Head>
         <title >Create Next App</title>
