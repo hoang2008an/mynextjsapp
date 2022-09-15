@@ -1,31 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
-import Selector from '../component/Selector'
+import Selector from '../../component/Selector'
 import {useState} from "react";
-import Setter from '../component/Setter'
-import {solve_pt1,solve_pt2,solve_pt3,solve_pt4} from '../../utils/algorithim/pt'
+import Setter from '../../component/Setter'
+import solve_eqn from '../../utils/algorithim/pt'
 export default function Home() {
     let num_param=2;
     const [option,set_option]=useState("PT bậc 2");
     const [para,set_para]=useState([]);
-    let result=""
-    if (para.length>0) {
-        switch(para.length){
-            case 2:
-                result=solve_pt1(para[0],para[1]);
-                break;
-            case 3:
-                result=solve_pt2(para[0],para[1],para[2]);
-                break;
-            case 4:
-                result=solve_pt3(para[0],para[1],para[2],para[3]);
-                break;
-            case 5:
-                result=solve_pt4(para[0],para[1],para[2],para[3],para[4]);
 
-        }
-    }
+
     switch (option) {
         case "PT bậc 1":
             num_param = 2;
@@ -60,9 +45,9 @@ export default function Home() {
         {option==="PT bậc 4" && <div>Nhập hai tham số a và b của phương trình bậc tư ax^4+bx^3+cx^2+dx+e=0</div> }
 </div>
         <Setter num_param={num_param} setoption={set_para}></Setter>
-          {para.map((value,key)=>(
-                <div key={key}>{value}</div>
-          ))}
+          <div className="flex justify-center">{solve_eqn(para)}</div>
+
+
 
       </main>
       <footer className={styles.footer}>

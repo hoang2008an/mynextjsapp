@@ -1,6 +1,6 @@
 import {useForm} from "react-hook-form";
 
-export default function({num_param, setoption: setpara}) {
+export default function Setter({num_param, setoption: setpara}) {
     let param=['a','b','c','d','e'];
     param=param.filter((value,key)=>key<num_param);
 
@@ -9,8 +9,8 @@ export default function({num_param, setoption: setpara}) {
 
         let arr=[];
         const keys = Object.keys(data);
-        keys.forEach((key) => {
-            arr.push(data[key]);
+        keys.forEach((key,index) => {
+            if(index<num_param)     arr.push(data[key]);
         })
         //data.map((value,key)=>(
           //  arr.push(value)
@@ -22,7 +22,7 @@ export default function({num_param, setoption: setpara}) {
         <form className= " place-items-center justify-center" onSubmit={handleSubmit((data) => setData(data))}>
             <div className="flex justify-center">
             {param.map((value, key)=>(
-                    <div className="flex-col flex justify-center mt-20">
+                    <div key={key} className="flex-col flex justify-center mt-20">
                         <label className="text-center" key={key}>{value}</label>
                         <input placeholder={value} className="first:border-l-2 last:border-r-2 border-x-black px-10 flex-row  border-x hover:border-b hover:border-b-pink-600" {...register(value)} />
                     </div>
