@@ -212,4 +212,4 @@ function process_data([a,str]){
 //module.exports={solve_pt1,solve_pt2,solve_pt3,solve_pt4};
 //console.log(process_data([1,1]))
 //console.log(solve_pt3(0,0,0,0))
-console.log(solve_eqn([1,4,8,4,4]));
+//console.log(solve_eqn([1,4,8,4,4]));

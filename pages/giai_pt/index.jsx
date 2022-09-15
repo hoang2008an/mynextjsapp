@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
-import Selector from '../../component/Selector'
+import Selector from '../../components/Selector'
 import {useState} from "react";
-import Setter from '../../component/Setter'
+import Setter from '../../components/Setter'
 import solve_eqn from '../../utils/algorithim/pt'
 export default function Home() {
     let num_param=2;
