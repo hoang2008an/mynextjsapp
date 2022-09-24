@@ -10,7 +10,7 @@ export default function handler(req,res){
     }
     dbConnect().then(()=>{
         console.log("request has been made");
-        var create_user = false;
+        let create_user = false;
         Users.exists({"username":req.body.username},function(err,result){
             console.log("0")
             if(err){console.log(err)
@@ -40,9 +40,7 @@ export default function handler(req,res){
                 }else create_user=true;
             }
         });
-        if(create_user){
 
-        }
     });
 
 }

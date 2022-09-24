@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 let connection ={};
 async function dbConnect(){
+    console.log
     if(connection.isConnected){
         return;
     }
