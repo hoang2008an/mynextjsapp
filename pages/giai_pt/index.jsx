@@ -6,6 +6,7 @@ import {useState} from "react";
 import Setter from '../../components/Setter'
 import solve_eqn from '../../utils/algorithim/pt'
 import Logo from "../../components/Logo";
+import User_info from "../../components/User_info";
 export default function Home() {
     let num_param=2;
     const [option,set_option]=useState("PT bậc 2");
@@ -36,6 +37,7 @@ export default function Home() {
       </Head>
 
       <main className="">
+            <User_info />
           <Logo classname="absolute left-0 top-0"/>
         <h1 className="text-center text-3xl font-bold text-gray-800">Giải phương trình</h1>
 
