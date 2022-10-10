@@ -37,7 +37,7 @@ export default function Home() {
       </Head>
 
       <main className="">
-            <User_info />
+
           <Logo classname="absolute left-0 top-0"/>
         <h1 className="text-center text-3xl font-bold text-gray-800">Giải phương trình</h1>
 
