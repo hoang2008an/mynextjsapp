@@ -22,7 +22,7 @@ export default function Header({ className }) {
     <div className={className}>
       <Navbar expand="lg" className="bg-pink-600  p-2 ">
         <Container>
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <Navbar.Brand href="/" className="flex justify-center">
               <FaHome className="relative top-1"></FaHome>{" "}
               <span className="text-black ">Home</span>
@@ -34,13 +34,13 @@ export default function Header({ className }) {
               <NavDropdown title="Toán">
                 <NavDropdown.Item>
                   <Link href="/giaipt" passHref>
-                    <a>Giải phương trình</a>
+                    Giải phương trình
                   </Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Item className="m-2">
-                <Link href="/giai_pt" className="" passHref>
-                  <a className="p-5">Giải phương trình</a>
+                <Link href="/giai_pt" className="" passHref className="p-5">
+                  Giải phương trình
                 </Link>
               </Nav.Item>
             </Nav>
@@ -68,13 +68,13 @@ export default function Header({ className }) {
                 ) : (
                   <>
                     <Nav.Item className="">
-                      <Link className="p-8" href="login" passHref>
-                        <a className="p-5">Đăng Nhập</a>
+                      <Link className="p-8" href="login" passHref className="p-5">
+                        Đăng Nhập
                       </Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Link href="/register" className="" passHref>
-                        <a className="p-5">Đăng Kí</a>
+                      <Link href="/register" className="" passHref className="p-5">
+                        Đăng Kí
                       </Link>
                     </Nav.Item>
                   </>

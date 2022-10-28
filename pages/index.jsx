@@ -16,8 +16,8 @@ export default function Home() {
       <main className="w-full flex-1 flex-col items-center justify-center px-20 text-center flex min-h-screen py-16">
         <h1 className="text-6xl font-bold pt-30">
           Chào mừng đến với{" "}
-          <Link href="/" passHref>
-            <a className="text-blue-600">Mathvn!</a>
+          <Link href="/" passHref className="text-blue-600">
+            Mathvn!
           </Link>
         </h1>
 
@@ -26,13 +26,16 @@ export default function Home() {
         </p>
 
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <Link href="/giai_pt" passHref>
-            <a className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600">
-              <h3 className="text-2xl font-bold">Giải phương trình &rarr;</h3>
-              <p className="mt-4 text-xl">
-                Giải các phương trình bậc 1 đến bậc 4 nhanh chóng và chính xác
-              </p>
-            </a>
+          <Link
+            href="/giai_pt"
+            passHref
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600">
+
+            <h3 className="text-2xl font-bold">Giải phương trình &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Giải các phương trình bậc 1 đến bậc 4 nhanh chóng và chính xác
+            </p>
+
           </Link>
           <a
             href="https://nextjs.org/learn"
