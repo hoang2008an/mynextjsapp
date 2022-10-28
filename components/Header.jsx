@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Else, If, Then } from "react-if";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { FaHome } from "react-icons/fa";
