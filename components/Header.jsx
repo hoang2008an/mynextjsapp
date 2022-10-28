@@ -39,7 +39,7 @@ export default function Header({ className }) {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Item className="m-2">
-                <Link href="/giai_pt" className="" passHref className="p-5">
+                <Link href="/giai_pt" passHref className="p-5">
                   Giải phương trình
                 </Link>
               </Nav.Item>
@@ -68,12 +68,12 @@ export default function Header({ className }) {
                 ) : (
                   <>
                     <Nav.Item className="">
-                      <Link className="p-8" href="login" passHref className="p-5">
+                      <Link className="p-8" href="login" passHref>
                         Đăng Nhập
                       </Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Link href="/register" className="" passHref className="p-5">
+                      <Link href="/register" className="" passHref>
                         Đăng Kí
                       </Link>
                     </Nav.Item>
