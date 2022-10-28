@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
-let connection ={};
-async function dbConnect(){
-    console.log
-    if(connection.isConnected){
-        return;
-    }
-    await mongoose.connect(process.env.MONGODB_URI);
-    connection.isConnected = mongoose.connections[0].readyState;
-    console.log(mongoose.connections[0].readyState);
+
+async function dbConnect() {
+  if (mongoose.connection.readyState >= 1) {
+    // if connection is open return the instance of the databse for cleaner queries
+    return mongoose.connection.db;
+  }
+
+  return mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 }
-dbConnect().then(()=>console.log("connected"));
+
 export default dbConnect;
