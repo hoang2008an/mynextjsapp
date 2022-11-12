@@ -1,10 +1,16 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import CredentialsProvider from "next-auth/providers/credentials";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "../../../utils/mongodbConnect";
 export default NextAuth({
   adapter: MongoDBAdapter(clientPromise),
   providers: [
+    CredentialsProvider({
+      id: "credentials",
+      name: "Credentials",
+      async authorize(credentials) {},
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,

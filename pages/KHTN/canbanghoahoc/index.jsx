@@ -5,7 +5,7 @@ let doBalance = () => {
   console.log("doBalance1");
 };
 
-export default function canbanghoahoc() {
+export default function Canbanghoahoc() {
   useEffect(() => {
     doBalance =
       require("../../../utils/algorithim/chemistry_equation_balancer").doBalance;

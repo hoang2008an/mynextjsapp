@@ -30,7 +30,7 @@ export default function Home() {
       break;
   }
   return (
-    <div className={styles.container}>
+    <div className="">
       <Head>
         <title>Giải phương trình</title>
         <meta

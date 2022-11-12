@@ -1,5 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import { SessionProvider } from "next-auth/react";
 import Link from "next/link";
 import {

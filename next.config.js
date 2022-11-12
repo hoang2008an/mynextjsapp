@@ -6,6 +6,7 @@ nextConfig = {
     domains: ["lh3.googleusercontent.com"],
   },
   env: {
+    SALT: 10,
     SECRET: "123456789", // This is the secret used to encrypt the JWT token
     NEXTAUTH_URL: "http://localhost:3000",
     NEXTAUTH_SECRET: "123456789",
