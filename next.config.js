@@ -8,7 +8,7 @@ nextConfig = {
   env: {
     SALT: 10,
     SECRET: "123456789", // This is the secret used to encrypt the JWT token
-    NEXTAUTH_URL: "http://localhost:3000",
+    NEXTAUTH_URL: "https://mathvn.netlify.app/",
     NEXTAUTH_SECRET: "123456789",
     // Add your environment variables here
     MONGODB_URI:
