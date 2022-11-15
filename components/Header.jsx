@@ -20,7 +20,7 @@ export default function Header({ className }) {
   console.log(session);
   return (
     <div className={className}>
-      <Navbar expand="lg" className="bg-pink-600  p-2 ">
+      <Navbar expand="lg" className="bg-pink-600   ">
         <Container>
           <Link href="/" passHref legacyBehavior>
             <Navbar.Brand href="/" className="flex justify-center">
@@ -31,7 +31,7 @@ export default function Header({ className }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Nav className="me-auto">
-              <NavDropdown title="Toán">
+              <NavDropdown title="Toán" className="pr-5">
                 <NavDropdown.Item>
                   <Link href="/giaipt" passHref>
                     Giải phương trình
@@ -39,7 +39,7 @@ export default function Header({ className }) {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Item className="m-2">
-                <Link href="/giai_pt" passHref className="p-5">
+                <Link href="/giai_pt" passHref className="">
                   Giải phương trình
                 </Link>
               </Nav.Item>
@@ -68,7 +68,7 @@ export default function Header({ className }) {
                 ) : (
                   <>
                     <Nav.Item className="">
-                      <Link className="p-8" href="login" passHref>
+                      <Link className="pr-8" href="login" passHref>
                         Đăng Nhập
                       </Link>
                     </Nav.Item>

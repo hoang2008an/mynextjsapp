@@ -7,26 +7,28 @@
  */
 "use strict";
 /*---- Entry point functions from HTML GUI ----*/
-let formulaElem = document.getElementById("inputFormula");
+// let formulaElem = document.getElementById("inputFormula");
 // Balances the given formula string and sets the HTML output on the page. Returns nothing.
+
 let doBalance = () => {
   // Clear output
   console.log("doBalance");
-  let formulaElem = document.getElementById("inputFormula");
-  const msgElem = document.getElementById("message");
-  const balancedElem = document.getElementById("balanced");
-  const codeOutElem = document.getElementById("codeOutput");
-  msgElem.textContent = "";
-  while (balancedElem.firstChild !== null)
-    balancedElem.removeChild(balancedElem.firstChild);
-  while (codeOutElem.firstChild !== null)
-    codeOutElem.removeChild(codeOutElem.firstChild);
-  codeOutElem.textContent = " ";
-  // Parse equation
-  const formulaStr = formulaElem.value;
+  // let formulaElem = document.getElementById("inputFormula");
+  // const msgElem = document.getElementById("message");
+  // const balancedElem = document.getElementById("balanced");
+  // const codeOutElem = document.getElementById("codeOutput");
+  // msgElem.textContent = "";
+  // while (balancedElem.firstChild !== null)
+  //   balancedElem.removeChild(balancedElem.firstChild);
+  // while (codeOutElem.firstChild !== null)
+  //   codeOutElem.removeChild(codeOutElem.firstChild);
+  // codeOutElem.textContent = " ";
+  // // Parse equation
+  // const formulaStr = formulaElem.value;
   let eqn;
   try {
-    eqn = new Parser(formulaStr).parseEquation();
+    //  eqn = new Parser(formulaStr).parseEquation();
+    eqn = new Parser("H2+O2=H2O").parseEquation();
   } catch (e) {
     if (e instanceof ParseError) {
       console.log("ParseError");
@@ -673,6 +675,8 @@ function createSpan(cls, text) {
   result.className = cls;
   return result;
 }
+doBalance();
+console.log(3);
 module.exports = {
   doBalance: doBalance,
 };
